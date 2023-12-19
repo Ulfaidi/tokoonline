@@ -1,0 +1,475 @@
+:root {
+  --warna_1: #16b36a;
+  --warna_2: #16b36a;
+  --warna_3: #ffffff;
+  --warna_4: #f5f5f5;
+  --loading-grey: #ededed;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+body {
+  background: #d0d0d0;
+}
+
+.content {
+  max-width: 480px;
+  margin: auto;
+  padding-bottom: 100px;
+  background: #f2f1f8;
+  height: auto; /* atau height: 100%; */
+}
+
+/* EFEK DI ATAS */
+.circles {
+  overflow: hidden;
+  width: 100%;
+  height: 185px;
+  background: var(--warna_2);
+  text-align: center;
+  padding-top: 20px;
+}
+
+.circles li {
+  position: relative;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  animation: animate 15s linear infinite;
+  bottom: -100%;
+  left: -80%;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+/* .circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+} */
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+/* EFEK DI ATAS */
+
+.content-body {
+  padding: 0 16px;
+  max-height: 100%;
+  margin-top: -230px;
+}
+/* MENU BAWAH */
+.menu-bottom {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 480px;
+  border-top: 1px solid #e2e8f0;
+  filter: drop-shadow(25px 8px 40px #ffffff);
+  background: rgba(255, 255, 255, 0.489);
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  -ms-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  padding: 0.25rem 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.menu-bottom iconify-icon {
+  font-size: 24px;
+  color: #718096;
+}
+
+.menu-bottom a {
+  text-decoration: none;
+}
+
+.menu-bottom a.active iconify-icon,
+.menu-bottom a.active p {
+  color: var(--warna_2) !important;
+}
+
+.menu-bottom p {
+  color: #718096;
+  font-size: 0.875rem;
+  margin-top: -5px;
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+
+#addcart {
+  float: right;
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #ff9b44c6;
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  -ms-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  position: absolute;
+  margin-top: 10px; /* Sesuaikan jarak dari atas */
+  margin-bottom: 10px; /* Sesuaikan jarak dari atas */
+  margin-right: 10px; /* Sesuaikan jarak dari atas */
+}
+/* MENU BAWAH */
+
+/* MENU ATAS */
+
+.navbar-top {
+  padding: 5px;
+  background-color: transparent;
+}
+.navbar-top iconify-icon {
+  font-size: 34px;
+  color: #ffffff;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Menggeser item ke kanan */
+}
+
+.navbar .nav-link {
+  margin-left: 10px; /* Jarak antara ikon dan batas kanan */
+}
+
+.cari {
+  margin-bottom: 30px;
+}
+
+.carousel-inner {
+  border-radius: 12px;
+  max-height: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.407);
+
+}
+
+/* MENU ATAS */
+
+/* DETAIL PRODUK */
+.price-container {
+  max-width: 500px;
+  margin: 20px auto;
+  margin-top: 20px;
+  padding: 10px;
+  background: var(--warna_1);
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.name-container {
+  max-width: 500px;
+  margin: 20px auto;
+  margin-top: -15px;
+  padding: 10px;
+  filter: drop-shadow(25px 8px 40px #cdcccc);
+  background: #cdcccc6d;
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  -ms-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+}
+.deskripsi-container {
+  max-width: 500px;
+  margin: 20px auto;
+  margin-top: -15px;
+  padding: 10px;
+  filter: drop-shadow(25px 8px 40px #cdcccc);
+  background: #cdcccc6d;
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  -ms-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+}
+
+.deskripsi-name {
+  font-size: 18px;
+  color: #121212; /* Green color for price */
+  font-weight: 600;
+}
+.deskripsi-rate span {
+  font-size: 15px;
+  color: #121212; /* Green color for price */
+  font-weight: 600;
+}
+.deskripsi-rate {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #5b5a5a; /* Green color for price */
+}
+.deskripsi {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #121212; /* Green color for price */
+}
+
+.product-price {
+  font-size: 15px;
+  color: var(--warna_3); /* Green color for price */
+}
+.product-price #icon-prize {
+  font-size: 15px;
+  color: var(--warna_3); /* Green color for price */
+}
+
+.product-rating {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* COMENT*/
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  to {
+    opacity: 0.99;
+    filter: drop-shadow(0 0 1px #16b36a) drop-shadow(0 0 15px #137849)
+      drop-shadow(0 0 1px #16b36a);
+  }
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    filter: none;
+  }
+}
+.section-title h3 {
+  font-family: "Mirza", serif;
+  font-weight: 500;
+}
+
+.animate-flicker {
+  animation: flicker 3s linear infinite;
+}
+
+.user-comments-container {
+  margin-top: 20px;
+}
+
+.show-comments {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.comment-user {
+  display: flex;
+  align-items: center;
+}
+
+.comment-user i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.comment-user div {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-user span {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment-user div {
+  font-size: 12px;
+  color: #777;
+}
+
+.comment-box {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+}
+
+/* COMENT*/
+/* DETAIL PRODUK */
+
+/* SIDES */
+
+.containerWA {
+  position: fixed;
+  z-index: 9;
+  bottom: 150px;
+  width: 465px;
+}
+.containerTOTOP {
+  position: fixed;
+  z-index: 9;
+  bottom: 70px;
+  width: 465px;
+}
+
+@media only screen and (max-width: 520px) {
+  .containerWA {
+    position: fixed;
+    z-index: 9;
+    bottom: 150px;
+    width: 97%;
+  }
+  .containerTOTOP {
+    position: fixed;
+    z-index: 9;
+    bottom: 70px;
+    width: 97%;
+  }
+}
+
+.areaWA {
+  height: 48px;
+  width: 48px;
+  background: #07b53b;
+  border-radius: 10px;
+  text-align: center;
+  float: right;
+}
+.areaTOTOP {
+  height: 48px;
+  width: 48px;
+  filter: drop-shadow(25px 8px 40px #5b5a5a);
+  background: #5b5a5a8d;
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  -ms-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border-radius: 10px;
+  text-align: center;
+  float: right;
+}
+/* SIDES */

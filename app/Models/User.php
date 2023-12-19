@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Di dalam model User
+// User.php
+
+public function customer()
+{
+    return $this->hasOne(Customer::class);
+}
+
+
 }

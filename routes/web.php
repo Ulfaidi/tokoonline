@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+
+    WebsiteController,
+    CustomerController
+ 
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +19,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [WebsiteController::class, 'index']);
+Route::get('/profil', [WebsiteController::class, 'profil']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::post('/update-profile',[CustomerController::class,'updateProfile'])->name('update-profile');
 });
+
+
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
