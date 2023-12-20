@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
 
     WebsiteController,
-    CustomerController
+    CustomerController,
+    TestController
  
 };
 
@@ -19,8 +20,17 @@ use App\Http\Controllers\{
 |
 */
 
+Route::get('/getprovince', [TestController::class, 'getprovince']);
+Route::get('/getcity', [TestController::class, 'getcity']);
+Route::get('/cekongkir', [TestController::class, 'cekongkir']);
+Route::post('/prosescekongkir', [TestController::class, 'prosescekongkir'])->name('prosescekongkir');
+
+
+
 Route::get('/', [WebsiteController::class, 'index']);
 Route::get('/profil', [WebsiteController::class, 'profil']);
+Route::get('/produk', [WebsiteController::class, 'produk'])->middleware('auth');
+Route::get('/detail', [WebsiteController::class, 'detail']);
 
 Route::middleware(['auth'])->group(function () {
     Route::post('/update-profile',[CustomerController::class,'updateProfile'])->name('update-profile');

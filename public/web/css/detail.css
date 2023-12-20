@@ -427,12 +427,18 @@ body {
   z-index: 9;
   bottom: 150px;
   width: 465px;
+  visibility: hidden;
+  visibility: hidden;
+
+
 }
 .containerTOTOP {
   position: fixed;
   z-index: 9;
   bottom: 70px;
   width: 465px;
+  visibility: hidden;
+
 }
 
 @media only screen and (max-width: 520px) {
@@ -441,12 +447,16 @@ body {
     z-index: 9;
     bottom: 150px;
     width: 97%;
+    visibility: hidden;
+
   }
   .containerTOTOP {
     position: fixed;
     z-index: 9;
     bottom: 70px;
     width: 97%;
+    visibility: hidden;
+
   }
 }
 
@@ -457,6 +467,9 @@ body {
   border-radius: 10px;
   text-align: center;
   float: right;
+  visibility: visible;
+  z-index: 1000;
+
 }
 .areaTOTOP {
   height: 48px;
@@ -471,5 +484,9 @@ body {
   border-radius: 10px;
   text-align: center;
   float: right;
+  visibility: visible;
+  z-index: 1000;
+
+
 }
 /* SIDES */

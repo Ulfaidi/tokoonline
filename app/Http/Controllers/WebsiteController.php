@@ -11,6 +11,14 @@ class WebsiteController extends Controller
     {
         return view('website.index');
     }
+    public function produk()
+    {
+        return view('website.produk');
+    }
+    public function detail()
+    {
+        return view('website.detail');
+    }
     public function profil()
     {
         $user = auth()->user();
